@@ -1,0 +1,2 @@
+model_checkpoint_path: "bodyparts_classification_model_checkpoint"
+all_model_checkpoint_paths: "bodyparts_classification_model_checkpoint"

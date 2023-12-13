@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        form {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        form:hover {
+            transform: scale(1.05);
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            width: 80%;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        input[type="file"]:hover {
+            background-color: #e0e0e0;
+        }
+
+        input[type="submit"] {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #297ca0;
+        }
+
+        div {
+            margin: 20px auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Add an animation to the result div */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        div {
+            animation: fadeIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Style the prediction text */
+        .prediction {
+            font-size: 24px;
+            font-weight: bold;
+            animation: zoomIn 1s ease-in-out;
+        }
+
+        /* Add a zoom-in animation to the prediction text */
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Classifier</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".png, .jpg, .jpeg">
+        <input type="submit" value="Upload and Predict">
+    </form>
+    {% if image_uploaded %}
+    <div>
+        <p><strong>Prediction:</strong> <span class="prediction">{{ prediction }}</span></p>
+    </div>
+    {% endif %}
+</body>
+</html>

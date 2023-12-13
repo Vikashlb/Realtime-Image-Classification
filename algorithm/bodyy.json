@@ -1,0 +1,23 @@
+
+{
+    "human_body": {
+      "anatomy_info": {
+        "foot": {
+          "function": "The foot serves as the primary support and mobility structure for the human body."
+        },
+        "nose": {
+          "function": "The nose serves essential functions in breathing and sensing. It acts as an airway, allowing us to inhale oxygen and exhale carbon dioxide."
+        },
+        "hand": {
+          "function": "The human palm is the central region of the hand, which serves as a grabing tool."
+        },
+        "ear": {
+          "function": "The primary function of the ear is to enable the perception of sound."
+        },
+        "eye": {
+          "function": "The eye is a complex sensory organ that provides the primary sense of vision in humans.  "
+        }
+      }
+    }
+  }
+  
